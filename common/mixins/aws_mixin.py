@@ -8,36 +8,6 @@ from datetime import datetime
 
 class AWS_Mixin():
        
-    def extract_text_from_id(self, document_name_list):
-        
-        textract = boto3.client('textract', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY, region_name=AWS_S3_REGION_NAME)
-        response = textract.analyze_id(
-            DocumentPages= [
-                {
-                    'S3Object': {
-                        'Bucket': AWS_STORAGE_BUCKET_NAME,
-                        'Name': document_name
-                    }
-                }
-            ],
-        )
-        # response = textract.analyze_document(
-        #     DocumentPages=[
-        #         {'Bytes': idcard_bytes},
-        #     ]
-        # )
-        # print(response)
-        
-        # doc = Document(response)
-        # extracted_dict = dict()
-        # for page in doc.pages:
-        #     for field in page.form.fields:
-        #         extracted_dict[str(field.key)] = str(field.value)
-                
-
-        return response      
-    
-
     def extract_text_from_document(self, document_name_list):
 
         textract = boto3.client('textract', aws_access_key_id=AWS_ACCESS_KEY_ID, aws_secret_access_key=AWS_SECRET_ACCESS_KEY, region_name=AWS_S3_REGION_NAME)

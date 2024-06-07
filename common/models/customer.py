@@ -5,8 +5,8 @@ from common.enums.generic_enums import Gender
 
 
 class Customer(models.Model):
-    firstname = models.CharField(max_length=100, unique=True)
-    lastname = models.CharField(max_length=100, unique=True)
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
     country = models.ForeignKey(Country, on_delete=models.RESTRICT)
     gender = models.CharField(max_length=10, choices=Gender.choices, default=Gender.OTHER.value)
     age = models.IntegerField(blank=True, null=True)

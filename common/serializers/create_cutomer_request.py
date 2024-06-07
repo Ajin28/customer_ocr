@@ -5,6 +5,11 @@ class Create_Customer_Request(serializers.Serializer):
     lastname = serializers.CharField()
     country_id = serializers.CharField()
     gender = serializers.CharField()
-    age = serializers.CharField(required = False)
+    age = serializers.CharField(default = None)
+    extracted_data = serializers.DictField()
+    front_image = serializers.CharField(default = None)
+    back_image = serializers.CharField(default = None)
+    document_set_id = serializers.CharField()
+
 
 

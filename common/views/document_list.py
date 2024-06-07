@@ -15,11 +15,13 @@ class DocumentListView(OCR_APIView):
 
        
         for document in queryset:
-            response.append({    
+            response.append({   
+                "document_set_id": document.id, 
                 "document_name": document.name,
                 "document_description": document.description,
                 "has_backside": document.has_backside,
-                "ocr_labels": document.ocr_labels,          
+                "ocr_labels": document.ocr_labels,  
+                "country_id": request.user.country.id        
             })
             
 
