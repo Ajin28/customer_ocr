@@ -31,8 +31,6 @@ To get started with the project, follow these steps:
 
    ```
 
-
-
 4. Install dependencies:
 
    ```bash
@@ -49,6 +47,13 @@ To get started with the project, follow these steps:
 6. Add .env (see .env_sample)
 
 7. Access the application in your web browser at `http://127.0.0.1:8000/admin`.
-Username - admin
-Password - password
-Email    - admin@gmail.com
+   Username - admin
+   Password - password
+   Email - admin@gmail.com
+
+8. Demo -
+
+```
+Video 1 - `https://www.loom.com/share/b46a57a1e5e0409f851fe42c30489228`
+Video 2 - `https://www.loom.com/share/9c0299ac912d46038145fd3aa70ad57c`
+```
