@@ -1,0 +1,1 @@
+from common.decorators.is_authenticated import is_authenticated

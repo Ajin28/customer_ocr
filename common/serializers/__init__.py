@@ -1,0 +1,5 @@
+from common.serializers.create_cutomer_request import Create_Customer_Request
+from common.serializers.upload_document_request import Upload_Document_Request
+from common.serializers.login_request import Login_Request
+from common.serializers.extract_data_request import Extract_Data_Request
+
