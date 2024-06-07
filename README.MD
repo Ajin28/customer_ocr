@@ -54,6 +54,6 @@ To get started with the project, follow these steps:
 8. Demo -
 
 ```
-Video 1 - `https://www.loom.com/share/b46a57a1e5e0409f851fe42c30489228`
-Video 2 - `https://www.loom.com/share/9c0299ac912d46038145fd3aa70ad57c`
+Video 1 - https://www.loom.com/share/b46a57a1e5e0409f851fe42c30489228
+Video 2 - https://www.loom.com/share/9c0299ac912d46038145fd3aa70ad57c
 ```
