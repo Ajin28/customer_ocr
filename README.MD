@@ -49,3 +49,6 @@ To get started with the project, follow these steps:
 6. Add .env (see .env_sample)
 
 7. Access the application in your web browser at `http://127.0.0.1:8000/admin`.
+Username - admin
+Password - password
+Email    - admin@gmail.com
