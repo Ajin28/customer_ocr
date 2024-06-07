@@ -10,6 +10,7 @@ class Create_Customer_Request(serializers.Serializer):
     front_image = serializers.CharField(default = None)
     back_image = serializers.CharField(default = None)
     document_set_id = serializers.CharField()
+    files = serializers.ListField(child = serializers.CharField(), allow_empty= True, max_length = 2, default = [])
 
 
 

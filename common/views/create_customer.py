@@ -5,6 +5,8 @@ from common.models import Customer, CustomerDocument, DocumentSet, Country
 from common.decorators import is_authenticated
 from django.utils.decorators import method_decorator
 from common.exceptions.rest_api_exception import RestAPIException
+from common.enums.env_enums import AWS_STORAGE_BUCKET_NAME
+
 
 class CreateCustomerView(OCR_APIView, AWS_Mixin):
     
@@ -30,6 +32,13 @@ class CreateCustomerView(OCR_APIView, AWS_Mixin):
             "customer_id": obj.id,
             "document_id": req_data["document_set_id"]
         }
+        if req_data['files']:
+            if len(req_data) > 1:
+                customer_document["front_image"] = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{req_data['files'][0]}"
+                customer_document["back_image"] = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{req_data['files'][1]}"
+            else:
+                customer_document["front_image"] = f"https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/{req_data['files'][0]}"
+
         obj = CustomerDocument.objects.create(**customer_document)
         obj.save()
 

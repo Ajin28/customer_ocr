@@ -24,8 +24,8 @@ class CustomerListView(OCR_APIView):
                     "document_description": document.document.description,
                     "has_backside": document.document.has_backside,
                     "possible_data": document.document.ocr_labels,
-                    "front_image": document.front_image.url,
-                    "back_image": document.back_image.url,
+                    "front_image":document.front_image,
+                    "back_image": document.back_image,
                     "extracted_json": document.extracted_json
                 })
             response.append({
