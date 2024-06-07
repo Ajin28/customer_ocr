@@ -6,7 +6,7 @@ from common.models import CustomerDocument
 from common.decorators import is_authenticated
 from django.utils.decorators import method_decorator
 
-class CustustomListView(OCR_APIView):
+class CustomerListView(OCR_APIView):
 
     @method_decorator(is_authenticated)
     def get(self, request):

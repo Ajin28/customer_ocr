@@ -1,5 +1,5 @@
 from django.urls import path
-from common.views import CreateCustomerView, LoginView, CustustomListView, UploadDocumentView, ExtractDataView
+from common.views import CreateCustomerView, LoginView, CustomerListView, UploadDocumentView, ExtractDataView, DocumentListView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -23,9 +23,11 @@ Including another URLconf
 urlpatterns = [
     path('create/', CreateCustomerView.as_view()),
     path('upload/', UploadDocumentView.as_view()),
+    path('document/', DocumentListView.as_view()),
     path('extract/', ExtractDataView.as_view()),
-    path("", CustustomListView.as_view()),
+    path("", CustomerListView.as_view()),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
     
 ]
